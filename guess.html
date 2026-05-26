@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <meta charset="UTF=8">
+        <title>Saving state with a hidden field</title>
+    </head>
+    <body>
+        
+        <h1><?php echo $message; ?></h1>
+
+        <p>Attempts: <?php echo $num_tries; ?></p>
+
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <p><strong>Type your Guess here:</strong>
+                <input type="text" name="guess" value="<?php echo htmlspecialchars($guess); ?>"></p>
+
+                <input type="hidden" name="num_tries" value="<?php echo $num_tries; ?>">
+
+                <p><input type="submit" value="Submit youe guess"></p>
+        </form>
+    </body>
+</html>
