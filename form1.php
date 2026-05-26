@@ -1,0 +1,35 @@
+<?php
+
+$num_to_guess = 42;
+$message = "";
+
+if (isset($_POST['guess'])) {
+    if ($_POST['guess'] > $num_to_guess) {
+        $message = "Your guess is too big ! Try a smaller number.";
+    } elseif ($_POST['guess'] < $num_to_guess) {
+        $message = "Your guess is too small ! Try a larger number.";
+    } else {
+        $message = "Welcome to the guessing machine!";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <meta charset="UTF=8">
+        <title>A PHP number guessing script</title>
+    </head>
+    <body>
+        
+        <h1><?php echo $message ; ?></h1>
+
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <p>
+                <strong>Type your guess here:</strong>
+                <input type="text" name="guess">            
+            </p>
+            <p><input type="submit" value="Submit your guess"></p>
+        </form>
+    </body>
+</html>

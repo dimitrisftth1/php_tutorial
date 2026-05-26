@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>forma polaplis epilogis</title>
+</head>
+<body>
+    
+    <form action="listing9.4.php" method="post">
+
+        <p><strong>Name:</strong><br>
+            <input type="text" name="user">        
+        </p>
+
+        <p><strong>Address:</strong><br>
+            <textarea name="address" rows="5" cols="40" id=""></textarea>        
+        </p>
+
+         <p><strong>Select some products:</strong><br>
+            <select name="products[]" multiple id="">
+                <!--<option value="Sonic Screwdriver">Sonic Screwdriver</option>
+                <option value="Tricorder">Tricorder</option>
+                <option value="ORAC AI">ORAC AI</option>
+                <option value="HAL 2000">HAL 2000</option>-->
+                <input type="checkbox" name="products[]" value="Sonic Screwdriver"> Sonic Screwdriver <br>
+                <input type="checkbox" name="products[]" value="Tricorder"> Tricorder <br>
+                <input type="checkbox" name="products[]" value="ORAC AI"> ORAC AI <br>
+                <input type="checkbox" name="products[]" value="HAL 2000"> HAL 2000 <br>
+                
+            </select>        
+        </p>
+
+        <p><input type="submit" value="Send"></p>
+    </form>
+    
+</body>
+
+</html>
